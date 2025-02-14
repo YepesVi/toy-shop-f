@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getProductos, deleteProducto } from "@/utils/api";
 import { useRouter } from "next/navigation";
+import { BadgePlus, Trash2, Edit } from 'lucide-react';
 
 
 
@@ -49,8 +50,10 @@ export default function ProductosPage() {
           <button
             onClick={() => router.push("/products/create")}
             className="bg-blue-500 text-white px-4 py-2 rounded w-full"
-          >  
+          > <div className="flex justify-center  gap-2"> 
+          <BadgePlus></BadgePlus>
             Crear Producto
+            </div>
           </button>
         </div>
         <table className="w-full border-collapse border text-center">
@@ -70,14 +73,20 @@ export default function ProductosPage() {
                   <button
                     className="bg-yellow-500 text-white px-3 py-1 rounded mr-2"
                     onClick={() => router.push(`/products/edit/${p.id}`)}
-                  >
+                  ><div className="flex justify-center  gap-2">
+                    <Edit></Edit>
                     Editar
+                  </div>
+                    
                   </button>
                   <button
                     className="bg-red-500 text-white px-3 py-1 rounded"
                     onClick={() => handleDelete(p.id)}
-                  >
+                  ><div className="flex justify-center  gap-2">
+                    <Trash2></Trash2>
                     Eliminar
+                  </div>
+                   
                   </button>
                 </td>
               </tr>
