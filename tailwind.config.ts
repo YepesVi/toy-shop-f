@@ -8,9 +8,8 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        'bgCloud': "url('https://i.postimg.cc/cHTZz1p2/Whats-App-Image-2025-02-13-at-5-27-15-PM.jpg')", // Ruta dentro de la carpeta `public/`
       },
     },
   },
